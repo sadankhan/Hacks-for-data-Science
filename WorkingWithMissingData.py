@@ -33,3 +33,5 @@ for column in missing_data.columns.values.tolist():
     print("") 
 
 ##$Deal with missing data
+avg_1 = df["column"].astype("float").mean(axis = 0)
+df["column"].replace(np.nan, avg_1, inplace = True)
